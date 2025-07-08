@@ -46,17 +46,12 @@ A modern, full-stack e-commerce website for soccer jerseys built with Next.js 14
    cd <Project Directory>
    ```
 
-2. **Install dependencies**
+2. **Run the development server**
    ```bash
-   npm install
+   npm start
    ```
 
-3. **Run the development server**
-   ```bash
-   npm run dev
-   ```
-
-4. **Open your browser**
+3. **Open your browser**
    Navigate to [http://localhost:3000](http://localhost:3000)
 
 
