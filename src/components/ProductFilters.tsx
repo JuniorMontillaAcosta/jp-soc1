@@ -178,9 +178,9 @@ export default function ProductFilters({
                     handleFilterChange("priceRange", range as [number, number])
                   }
                   className={`px-3 py-2 text-start text-xs rounded-lg border transition-all duration-300 ${filters.priceRange[0] === range[0] &&
-                      filters.priceRange[1] === range[1]
-                      ? "bg-yellow-500 text-black border-yellow-500"
-                      : "bg-gray-800 text-white border-gray-600 hover:border-yellow-500 hover:bg-gray-700"
+                    filters.priceRange[1] === range[1]
+                    ? "bg-yellow-500 text-black border-yellow-500"
+                    : "bg-gray-800 text-white border-gray-600 hover:border-yellow-500 hover:bg-gray-700"
                     }`}
                 >
                   {label}

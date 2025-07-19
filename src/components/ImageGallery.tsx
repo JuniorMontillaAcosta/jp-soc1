@@ -60,8 +60,8 @@ export default function ImageGallery({ images, title }: ImageGalleryProps) {
               key={index}
               onClick={() => setCurrentImageIndex(index)}
               className={`aspect-square rounded-md overflow-hidden border-2 transition-colors ${index === currentImageIndex
-                  ? "border-blue-500"
-                  : "border-gray-200 hover:border-gray-300"
+                ? "border-blue-500"
+                : "border-gray-200 hover:border-gray-300"
                 }`}
             >
               <YupooImage
