@@ -6,7 +6,8 @@ const path = require("path");
  *
  * Converts raw.json from scraper into properly structured products.json
  * with clean, consistent fields matching the Product type.
- *
+ * 
+ * 
  * Usage: npm run enrich:products
  */
 
@@ -633,8 +634,7 @@ export default products;
 
       console.log("\n📈 Summary:");
       console.log(
-        `🏟️  Clubs: ${clubs.length} (${clubs.slice(0, 5).join(", ")}${
-          clubs.length > 5 ? "..." : ""
+        `🏟️  Clubs: ${clubs.length} (${clubs.slice(0, 5).join(", ")}${clubs.length > 5 ? "..." : ""
         })`
       );
       console.log(`🏆 Leagues: ${leagues.join(", ")}`);

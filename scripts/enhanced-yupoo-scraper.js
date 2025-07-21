@@ -343,8 +343,7 @@ class EnhancedYupooScraper {
       for (let attempt = 1; attempt <= this.retryAttempts; attempt++) {
         try {
           console.log(
-            `    📥 Downloading image ${imageIndex + 1} (attempt ${attempt}/${
-              this.retryAttempts
+            `    📥 Downloading image ${imageIndex + 1} (attempt ${attempt}/${this.retryAttempts
             })`
           );
 
@@ -418,8 +417,7 @@ class EnhancedYupooScraper {
       for (let i = 0; i < albumsToProcess.length; i++) {
         const album = albumsToProcess[i];
         console.log(
-          `\n📁 Processing album ${i + 1}/${albumsToProcess.length}: ${
-            album.title
+          `\n📁 Processing album ${i + 1}/${albumsToProcess.length}: ${album.title
           }`
         );
 

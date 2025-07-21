@@ -18,7 +18,7 @@ const fsSync = require("fs");
         if (key && !(key in process.env)) process.env[key] = value;
       });
     }
-  } catch (_) {}
+  } catch (_) { }
 })();
 
 /**
@@ -57,8 +57,7 @@ class CloudinaryUploader {
     for (let attempt = 1; attempt <= maxAttempts; attempt++) {
       try {
         console.log(
-          `  ☁️ Uploading: ${imagePath}${
-            attempt > 1 ? ` (retry ${attempt}/${maxAttempts})` : ""
+          `  ☁️ Uploading: ${imagePath}${attempt > 1 ? ` (retry ${attempt}/${maxAttempts})` : ""
           }`
         );
         const result = await cloudinary.uploader.upload(imagePath, {
@@ -179,8 +178,7 @@ class CloudinaryUploader {
         const productSlug = this.slugify(album.albumTitle);
 
         console.log(
-          `\n📁 Processing album ${i + 1}/${rawData.albums.length}: ${
-            album.albumTitle
+          `\n📁 Processing album ${i + 1}/${rawData.albums.length}: ${album.albumTitle
           }`
         );
 
