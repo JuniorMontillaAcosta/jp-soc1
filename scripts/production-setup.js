@@ -5,7 +5,6 @@ const path = require("path");
 
 /**
  * Production Setup Script
- *
  * Validates the environment and prepares the app for deployment
  */
 
@@ -27,7 +26,6 @@ class ProductionSetup {
 
   async run() {
     console.log("🔧 Production Setup");
-    console.log("==================");
 
     try {
       await this.checkEnvironment();
@@ -36,6 +34,7 @@ class ProductionSetup {
 
       console.log("\n✅ Production setup completed successfully!");
       console.log("🚀 Your app is ready for deployment");
+      
     } catch (error) {
       console.error("\n❌ Production setup failed:", error.message);
       process.exit(1);

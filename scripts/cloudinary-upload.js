@@ -4,6 +4,7 @@ const { v2: cloudinary } = require("cloudinary");
 const fsSync = require("fs");
 
 // Lightweight .env loader so the script works via `node` without dotenv
+
 (() => {
   try {
     const envPath = path.join(process.cwd(), ".env.local");
@@ -36,7 +37,7 @@ class CloudinaryUploader {
     this.rawJsonPath = path.join(__dirname, "../data/raw.json");
     this.uploadedImages = [];
 
-    // Configure Cloudinary. Prefer CLOUDINARY_URL if provided
+
     if (
       process.env.CLOUDINARY_URL ||
       (process.env.CLOUDINARY_CLOUD_NAME &&
@@ -60,6 +61,7 @@ class CloudinaryUploader {
           `  ☁️ Uploading: ${imagePath}${attempt > 1 ? ` (retry ${attempt}/${maxAttempts})` : ""
           }`
         );
+
         const result = await cloudinary.uploader.upload(imagePath, {
           folder: `soccer-vault/${productSlug}`,
           public_id: `image${imageIndex + 1}`,
@@ -76,6 +78,7 @@ class CloudinaryUploader {
           await new Promise((r) => setTimeout(r, backoffMs));
           continue;
         }
+        
         return null;
       }
     }

@@ -18,6 +18,7 @@ const { URL } = require("url");
  * - Proper image downloading (not hotlinks)
  */
 
+
 class EnhancedYupooScraper {
   constructor() {
     this.baseUrl = "https://jersey-factory.x.yupoo.com/collections/4842543";
@@ -32,7 +33,6 @@ class EnhancedYupooScraper {
   }
 
   async init() {
-    console.log("🚀 Initializing Enhanced Yupoo Scraper...");
 
     await this.createDirectories();
 
@@ -46,6 +46,7 @@ class EnhancedYupooScraper {
         "--disable-features=VizDisplayCompositor",
         "--disable-blink-features=AutomationControlled",
       ],
+      
     });
 
     this.context = await this.browser.newContext({
