@@ -84,17 +84,17 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   const [state, dispatch] = useReducer(cartReducer, initialState);
 
   // Load cart from localStorage on mount
-  // useEffect(() => {
-  //   const savedCart = localStorage.getItem("cart");
-  //   if (savedCart) {
-  //     try {
-  //       const parsedCart = JSON.parse(savedCart);
-  //       dispatch({ type: "LOAD_CART", payload: parsedCart });
-  //     } catch (error) {
-  //       // Silently handle localStorage errors
-  //     }
-  //   }
-  // }, []);
+  useEffect(() => {
+    const savedCart = localStorage.getItem("cart");
+    if (savedCart) {
+      try {
+        const parsedCart = JSON.parse(savedCart);
+        dispatch({ type: "LOAD_CART", payload: parsedCart });
+      } catch (error) {
+        // Silently handle localStorage errors
+      }
+    }
+  }, []);
 
   // Save cart to localStorage whenever it changes
   useEffect(() => {

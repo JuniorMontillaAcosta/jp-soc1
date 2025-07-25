@@ -36,7 +36,6 @@ export default function CartPage() {
 
   const handleRemoveItem = (id: string, size: string) => {
     removeItem(id, size);
-    console.log(id, size);
   };
 
   if (items.length === 0) {
